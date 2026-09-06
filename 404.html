@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LYRA: signal lost</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>
+@font-face{
+  font-family:'Roboto Mono';
+  src:url('/assets/roboto-mono-b81cd551.woff2') format('woff2');
+  font-weight:100 700;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2122,U+2212,U+FEFF,U+FFFD;
+}
+html,body{height:100%}
+body{
+  margin:0;background:#0a0a0a;color:#e8e8e8;
+  font-family:'Roboto Mono',ui-monospace,monospace;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:1.5rem;
+}
+main{display:flex;flex-direction:column;gap:1.25rem;align-items:center}
+h1{font-size:clamp(1rem,3.2vw,1.35rem);font-weight:400;letter-spacing:.16em;margin:0}
+p{margin:0;color:#8a8a8a;font-size:.82rem;letter-spacing:.06em;max-width:34ch;line-height:1.7}
+a{
+  color:#e8e8e8;text-decoration:none;font-size:.78rem;letter-spacing:.16em;
+  border:1px solid #333;padding:.7rem 1.5rem;transition:border-color .2s,color .2s;
+}
+a:hover,a:focus-visible{border-color:#e8e8e8}
+a:focus-visible{outline:2px solid #e8e8e8;outline-offset:3px}
+.blink{animation:b 1.6s steps(1,end) infinite}
+@keyframes b{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.blink{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <h1>[SIGNAL LOST<span class="blink">_</span>]</h1>
+  <p>404 &mdash; this route is not part of the network.</p>
+  <a href="/">RETURN TO LYRA</a>
+</main>
+</body>
+</html>
