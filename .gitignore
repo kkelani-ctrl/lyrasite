@@ -1,0 +1,6 @@
+# Local pre-minification snapshots — not part of the deployed site.
+.backup/
+
+node_modules/
+.wrangler/
+.DS_Store

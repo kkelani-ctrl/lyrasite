@@ -1,0 +1,11 @@
+{
+  "name": "lyra",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy .",
+    "preview": "wrangler pages dev ."
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
