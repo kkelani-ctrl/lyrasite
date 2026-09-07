@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-wf-page="67a298a8d437db5697c60526" data-wf-site="67a298a8d437db5697c60527"><head><meta charset="utf-8"><title>LYRA</title><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." name="description"><meta content="LYRA" property="og:title"><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." property="og:description"><meta content="LYRA" name="twitter:title"><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." name="twitter:description"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><link rel="canonical" href="https://lyra.pages.dev/"><meta property="og:url" content="https://lyra.pages.dev/"><meta property="og:image" content="https://lyra.pages.dev/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://lyra.pages.dev/assets/og-image.png"><meta property="og:site_name" content="LYRA"><link rel="icon" href="/favicon.ico" sizes="any"><meta content="Webflow" name="generator"><style>html {
+<html lang="en" data-wf-page="67a298a8d437db5697c60526" data-wf-site="67a298a8d437db5697c60527"><head><meta charset="utf-8"><title>LYRA</title><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." name="description"><meta content="LYRA" property="og:title"><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." property="og:description"><meta content="LYRA" name="twitter:title"><meta content="LYRA: The fusion of blockchain and artificial intelligence. A decentralized intelligence network shaping the future of autonomous finance, governance, and innovation." name="twitter:description"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><link rel="canonical" href="https://lyrasite.knutkelani-p.workers.dev/"><meta property="og:url" content="https://lyrasite.knutkelani-p.workers.dev/"><meta property="og:image" content="https://lyrasite.knutkelani-p.workers.dev/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://lyrasite.knutkelani-p.workers.dev/assets/og-image.png"><meta property="og:site_name" content="LYRA"><link rel="icon" href="/favicon.ico" sizes="any"><meta content="Webflow" name="generator"><style>html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
@@ -3267,11 +3267,16 @@ textarea.w-input, textarea.w-select {
 <script>
   const song = "https://res.cloudinary.com/dxwvdjr0j/video/upload/v1738916582/websound_gd9zgl.mp3"
   const audio = new Audio(song)
-  audio.volume = 0.1
+  audio.volume = 0.0 // Start silent; fadeInVolume() eases up to AMBIENT_VOLUME.
+
+  // Ambient background bed, not a foreground track — keep it well under the
+  // level where it competes with anything else the visitor is listening to.
+  const AMBIENT_VOLUME = 0.12
   
   function togglePlayPause() {
   	if (audio.paused) {
     	audio.loop = true;
+    	audio.volume = AMBIENT_VOLUME;
     	audio.play();
     	console.log('playing')
   	} else {
@@ -3287,9 +3292,9 @@ textarea.w-input, textarea.w-select {
 
   
   function fadeInVolume() {
-    let volume = 0.1; // Start at 10%
-    const targetVolume = 0.4; // End at 50%
-    const fadeDuration = 5000; // Duration for fade-in effect (5 seconds)
+    let volume = 0.0; // Start silent
+    const targetVolume = AMBIENT_VOLUME; // End at 12%
+    const fadeDuration = 8000; // Duration for fade-in effect (8 seconds)
 
     const incrementPerInterval = (targetVolume - volume) / (fadeDuration / 50); // 	Calculate increment per interval
 

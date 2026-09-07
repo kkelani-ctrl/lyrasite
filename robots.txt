@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lyra.pages.dev/sitemap.xml
+Sitemap: https://lyrasite.knutkelani-p.workers.dev/sitemap.xml
