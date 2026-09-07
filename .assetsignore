@@ -1,0 +1,13 @@
+# Everything here is repo/build tooling, not part of the public site.
+# Same syntax as .gitignore. Note: _headers is intentionally NOT listed —
+# Workers parses it and applies the rules, and never serves it as an asset.
+wrangler.toml
+package.json
+bun.lock
+bun.lockb
+package-lock.json
+node_modules
+.wrangler
+.assetsignore
+.gitignore
+.backup

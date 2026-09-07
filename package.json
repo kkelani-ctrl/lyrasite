@@ -2,8 +2,8 @@
   "name": "lyra",
   "private": true,
   "scripts": {
-    "deploy": "wrangler pages deploy .",
-    "preview": "wrangler pages dev ."
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "devDependencies": {
     "wrangler": "^4"
